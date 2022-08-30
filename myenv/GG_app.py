@@ -30,11 +30,7 @@ if __name__ == "__main__":
 
     col1, col2 = st.columns(2)
     mood_name = col1.selectbox("Choose your mood:", moods) # Store user selection for agency name
-    col2.title('')
-
-    st.title('')
-
     df = episode_list()
     if mood_name!='':
         selector = return_episode(df,mood_name)
-        st.write(selector)
+        col2.write(selector)
