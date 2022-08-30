@@ -16,7 +16,6 @@ def episode_list():
     df = pd.read_excel(data)
     return df
 
-@st.cache(show_spinner=False)
 def return_episode(df,mood_name):
     row = df.query('Category == @mood_name').sample(n=1)
     episode = (row.iloc[0]['Season'],row.iloc[0]['Episode'])
