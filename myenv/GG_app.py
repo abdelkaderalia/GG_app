@@ -47,7 +47,8 @@ if __name__ == "__main__":
         air_date = output[3]
         viewers = output[4]
 
-        st.success(f'Check out Season {selector[0]}, Episode {selector[1]}!')
+        col1,col2 = st.columns(2)
+        col1.success(f'Check out Season {selector[0]}, Episode {selector[1]}!')
 
         st.write(f'Episode Title: {title}')
         st.write(f'Episode Number Overall: {num} out of 153')
